@@ -7,7 +7,6 @@ def get_compulsory(message) -> str:
         return response
 
 class Data:
-    shift_team = ""
     date = ""
     start_time = ""
     firewood_usage_kg = ""
@@ -20,8 +19,7 @@ class Data:
     final_pressure = ""
     end_time = ""
 
-    def __init__(self,shift_team,date,start_time,firewood_usage_kg,firewood_mc,briquette_usage_kg,initial_pressure,average_loading,flue_gas_1,flue_gas_2,final_pressure,end_time) -> None:
-        self.shift_team = shift_team
+    def __init__(self,date,start_time,firewood_usage_kg,firewood_mc,briquette_usage_kg,initial_pressure,average_loading,flue_gas_1,flue_gas_2,final_pressure,end_time) -> None:
         self.date = date
         self.start_time = start_time
         self.firewood_usage_kg = firewood_usage_kg
@@ -36,8 +34,6 @@ class Data:
 
 
     def create_fuel_record():
-        shift_team = get_compulsory("Enter the SHIFT/TEAM")
-
         date = get_compulsory("Enter the DATE")
 
         start_time = get_compulsory("Enter the START_TIME")
@@ -60,4 +56,4 @@ class Data:
 
         end_time = get_compulsory("Enter the END TIME")
 
-        return Data(shift_team,date,start_time,firewood_usage_kg,firewood_mc,briquette_usage,initial_pressure,average_loading,flue_gas_1,flue_gas_2,final_pressure,end_time)
+        return Data(date,start_time,firewood_usage_kg,firewood_mc,briquette_usage,initial_pressure,average_loading,flue_gas_1,flue_gas_2,final_pressure,end_time)

@@ -5,7 +5,6 @@ from data import Data
 def write_file(records:list[Data]):
 
     field_names = [
-        'SHIFT/NAME',
         'DATE',
         'START TIME',
         'FIREWOOD USAGE KG',
@@ -26,7 +25,6 @@ def write_file(records:list[Data]):
 
         for i in range(0,len(records)):
             writer.writerow({
-                'SHIFT/NAME' : records[i].shift_team,
                 'DATE' : records[i].date,
                 'START TIME' : records[i].start_time,
                 'FIREWOOD USAGE KG' : records[i].firewood_usage_kg,
