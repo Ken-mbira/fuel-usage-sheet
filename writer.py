@@ -12,8 +12,8 @@ def write_file(records:list[Data]):
         'BRIQUETTE USAGE KG',
         'INITIAL PRESSURE',
         'Average LOADING',
-        'FLUE GAS',
-        'FLUE GAS',
+        'FLUE GAS 1',
+        'FLUE GAS 2',
         'FINAL PRESSURE',
         'END TIME'
     ]
@@ -32,8 +32,8 @@ def write_file(records:list[Data]):
                 'BRIQUETTE USAGE KG' : records[i].briquette_usage_kg,
                 'INITIAL PRESSURE' : records[i].initial_pressure,
                 'Average LOADING' : records[i].average_loading,
-                'FLUE GAS' : records[i].flue_gas_1,
-                'FLUE GAS': records[i].flue_gas_2,
+                'FLUE GAS 1' : records[i].flue_gas_1,
+                'FLUE GAS 2': records[i].flue_gas_2,
                 'FINAL PRESSURE' : records[i].final_pressure,
                 'END TIME' : records[i].end_time
             })
